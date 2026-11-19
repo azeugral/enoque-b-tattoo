@@ -20,7 +20,7 @@ Conferido contra as legendas, as placas e o Google:
 - Avaliações transcritas como estão no Google.
 - Removido o que não tinha fonte: "cada flash é tatuado uma vez só", "retratos e pets" e "cada projeto é desenhado para quem vai tatuar".
 
-Os adornos são os contornos dos flashes autorais dele (desenhos inteiros), gerados por `tools/orn_flash.py`.
+Fundo: mármore pontilhado sem emenda, na mesma linguagem do Coala Ink (`tools/marmore.py`): claro nas seções escuras e tinta no papel. Sem decalques.
 
 ## CONFIRMAR
 - Idioma: o site está em PT-BR, como as legendas dele. Confirmar se prefere PT-PT.

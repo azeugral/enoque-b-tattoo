@@ -76,17 +76,11 @@ nav ul a:hover{color:var(--ink)}
  .sub{margin-top:10px;font-size:10px}.hero .btns{margin-top:12px}
 }
 
-/* adornos: o lineart do próprio Enoque (as folhas que aparecem atrás das peças nas fotos dele), estáticos e apagados */
-section,.hero{position:relative;overflow:hidden}
+/* fundo: mármore pontilhado sem emenda (mesma linguagem do Coala), claro no escuro e tinta no papel */
+section{position:relative;overflow:hidden}
 section>.wrap,section>.duo{position:relative;z-index:1}
-.orn{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-drag:none;max-width:none;height:auto;opacity:var(--o,.08)}
-.orn.m{transform:scaleX(-1)}
-.orn-c{left:50%;top:56px;width:min(440px,70vw);transform:translateX(-50%);--o:.055}
-.orn-k{bottom:64px;width:clamp(170px,15vw,290px);--o:.085}
-.orn-k.l{left:2.5%}.orn-k.r{right:2.5%}
-.orn-t{top:72px;width:clamp(150px,13vw,250px);--o:.08}
-.orn-t.l{left:2.5%}.orn-t.r{right:2.5%}
-.papel .orn{--o:.11}
+.mar{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/mar-c.webp) center/1500px auto repeat;opacity:.13}
+.papel .mar{background-image:url(img/mar-k.webp);opacity:.2}
 
 /* faço: os estilos além do anime, organizados pelas séries do próprio Enoque */
 .faco{background:var(--bg2)}
@@ -250,9 +244,7 @@ footer p+p{margin-top:6px}
  .map{height:280px}
  .duas{grid-template-columns:1fr;gap:22px}
  .chips span{padding:10px 12px;font-size:12px}
- .orn{--o:.05!important}.papel .orn{--o:.08!important}
- .orn-k{width:112px;bottom:30px}.orn-t{width:100px;top:26px}.orn-k.l,.orn-t.l{left:8px}.orn-k.r,.orn-t.r{right:8px}
- .orn-c{width:min(300px,76vw);top:28px}
+ .mar{background-size:900px auto}
  .lb .pv,.lb .nx{top:auto;bottom:22px;width:48px;height:52px}
  .lb .quero{font-size:12px;padding:0 14px}
 }
@@ -282,7 +274,7 @@ footer p+p{margin-top:6px}
 </header>
 
 <section class="faco" id="faco">
- <img class="orn orn-c" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Mais de 13 anos de tatuagem</span>
   <h2 class="rv">“Será que ele faz esse tipo de tatuagem?” <span>Faço.</span></h2>
@@ -297,8 +289,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="trabalhos">
- <img class="orn orn-k l" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Portfólio</span>
   <h2 class="rv">Do anime para a pele</h2>
@@ -312,8 +303,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="papel" id="flash">
- <img class="orn orn-t l" src="img/orn/f05-k.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-t r m" src="img/orn/f05-k.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Flashes</span>
   <h2 class="rv">Desenhos autorais disponíveis</h2>
@@ -333,8 +323,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="coberturas">
- <img class="orn orn-k l" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Coberturas</span>
   <h2 class="rv">Sua tatuagem antiga não precisa ser para sempre</h2>
@@ -356,7 +345,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="prem" id="premiado">
- <img class="orn orn-c" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Premiado</span>
   <h2 class="rv">2º lugar na Oporto Tattoo</h2>
@@ -370,8 +359,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="sobre">
- <img class="orn orn-k l" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="duo">
   <div class="ph rv"><img src="img/enoque.webp" alt="Enoque Barbosa, tatuador" width="1080" height="1350"></div>
   <div class="tx rv">
@@ -387,8 +375,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="prem" id="dizem">
- <img class="orn orn-t l" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-t r m" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Avaliações no Google</span>
   <h2 class="rv">Quem já tatuou com o Enoque</h2>
@@ -404,8 +391,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="curso" id="curso" style="background:var(--bg)">
- <img class="orn orn-k l" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap" style="max-width:820px;text-align:center">
   <span class="rot rv">Curso individual</span>
   <h2 class="rv">Iniciação à tatuagem</h2>
@@ -416,8 +402,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="estudio prem" id="estudio">
- <img class="orn orn-t l" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-t r m" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="duo">
   <div class="tx rv">
    <span class="rot">Estúdio</span>
@@ -432,8 +417,7 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="marcar">
- <img class="orn orn-k l" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
+ <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Orçamento</span>
   <h2 class="rv">Conte a sua ideia</h2>
