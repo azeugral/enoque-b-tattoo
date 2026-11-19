@@ -20,7 +20,7 @@ Conferido contra as legendas, as placas e o Google:
 - Avaliações transcritas como estão no Google.
 - Removido o que não tinha fonte: "cada flash é tatuado uma vez só", "retratos e pets" e "cada projeto é desenhado para quem vai tatuar".
 
-Fundo: mármore pontilhado sem emenda, na mesma linguagem do Coala Ink (`tools/marmore.py`): claro nas seções escuras e tinta no papel. Sem decalques.
+Fundo: uma só camada de mármore pontilhado (linguagem do Coala Ink, `tools/marmore.py`) sob o site inteiro depois do hero, todas as seções no mesmo tom, sem emenda entre elas. Sem decalques.
 
 ## CONFIRMAR
 - Idioma: o site está em PT-BR, como as legendas dele. Confirmar se prefere PT-PT.

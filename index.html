@@ -76,14 +76,13 @@ nav ul a:hover{color:var(--ink)}
  .sub{margin-top:10px;font-size:10px}.hero .btns{margin-top:12px}
 }
 
-/* fundo: mármore pontilhado sem emenda (mesma linguagem do Coala), claro no escuro e tinta no papel */
-section{position:relative;overflow:hidden}
+/* fundo: UMA camada de mármore pontilhado (linguagem do Coala) sob todo o site depois do hero, sem emenda entre seções */
+section{position:relative;overflow:hidden;background:transparent}
 section>.wrap,section>.duo{position:relative;z-index:1}
-.mar{position:absolute;inset:0;z-index:0;pointer-events:none;background:url(img/mar-c.webp) center/1500px auto repeat;opacity:.13}
-.papel .mar{background-image:url(img/mar-k.webp);opacity:.2}
+.fundo{position:relative;isolation:isolate;background:var(--bg)}
+.fundo::before{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:url(img/mar-c.webp) top center/1500px auto repeat;opacity:.13;-webkit-mask-image:linear-gradient(transparent,#000 320px);mask-image:linear-gradient(transparent,#000 320px)}
 
 /* faço: os estilos além do anime, organizados pelas séries do próprio Enoque */
-.faco{background:var(--bg2)}
 .faco h2 span{display:block;color:var(--cor2)}
 .est-g{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,1.6vw,22px)}
 .est-g button{all:unset;cursor:pointer;display:block;text-align:center}
@@ -116,12 +115,12 @@ section>.wrap,section>.duo{position:relative;z-index:1}
 .papel .rot{color:var(--cor)}
 .fl-g{display:grid;grid-template-columns:repeat(4,1fr);gap:clamp(14px,2vw,28px);margin:6px 0 34px}
 .fl-g figure{margin:0;cursor:zoom-in}
-.fl-g .fl{display:block;padding:10px;background:#fff;border:5px solid var(--tinta);box-shadow:0 0 0 1px rgba(0,0,0,.18),0 26px 44px -22px rgba(40,25,20,.6);transition:transform .3s var(--e)}
+.fl-g .fl{display:block;padding:10px;background:var(--papel);border:5px solid #070606;box-shadow:0 0 0 1px #3a332f,0 22px 34px -18px #000;transition:transform .3s var(--e)}
 .fl-g figure:hover .fl{transform:translateY(-4px)}
 .fl-g img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover}
 .fl-g figcaption{margin-top:14px;font:400 1.3rem/1.15 Rozha,serif;text-align:center}
-.fl-g figcaption span{display:block;margin-top:6px;font:700 11px/1 Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cor)}
-.fl-cta{text-align:center}.fl-cta p{margin:0 auto 22px;max-width:460px;font-size:15px;color:#5d544e}
+.fl-g figcaption span{display:block;margin-top:6px;font:700 11px/1 Manrope,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:var(--cor2)}
+.fl-cta{text-align:center}.fl-cta p{margin:0 auto 22px;max-width:460px;font-size:15px;color:var(--mut)}
 
 /* antes e depois */
 .par-g{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(16px,2vw,28px)}
@@ -136,7 +135,6 @@ section>.wrap,section>.duo{position:relative;z-index:1}
 .sub-t{margin:72px 0 28px;text-align:center;font:400 2rem/1.1 Rozha,serif}
 
 /* premiado */
-.prem{background:var(--bg2)}
 .prem-g{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(14px,2vw,26px);max-width:1100px;margin:0 auto}
 .prem-g figure{margin:0;text-align:center}
 .prem-g img{width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 0 0 1px #3a332f}
@@ -155,8 +153,6 @@ blockquote cite{display:block;margin-top:12px;font:700 11px/1 Manrope,sans-serif
 .fatos div{background:var(--bg);padding:20px 14px;text-align:center}
 .fatos b{display:block;font:400 1.3rem/1.15 Rozha,serif;color:var(--ink);margin-bottom:6px}
 .fatos span{font-size:14px;color:var(--mut);line-height:1.4;display:block}
-.curso{background:var(--bg2)}
-.curso .fatos div{background:var(--bg2)}
 .map{display:block;width:100%;height:340px;border:0;filter:grayscale(1) invert(.9) contrast(.9);margin-top:56px}
 
 /* o que dizem */
@@ -194,7 +190,7 @@ blockquote cite{display:block;margin-top:12px;font:700 11px/1 Manrope,sans-serif
 .form .btn{width:100%}
 .form small{display:block;text-align:center;color:var(--mut);font-size:13px;line-height:1.5}
 
-footer{border-top:1px solid var(--line);padding:46px 24px;text-align:center;color:var(--mut);font-size:14px}
+footer{padding:30px 24px 46px;text-align:center;color:var(--mut);font-size:14px}
 footer .logo{margin-bottom:16px;font-size:30px}
 footer p+p{margin-top:6px}
 
@@ -244,7 +240,7 @@ footer p+p{margin-top:6px}
  .map{height:280px}
  .duas{grid-template-columns:1fr;gap:22px}
  .chips span{padding:10px 12px;font-size:12px}
- .mar{background-size:900px auto}
+ .fundo::before{background-size:900px auto}
  .lb .pv,.lb .nx{top:auto;bottom:22px;width:48px;height:52px}
  .lb .quero{font-size:12px;padding:0 14px}
 }
@@ -272,9 +268,9 @@ footer p+p{margin-top:6px}
   <div class="btns"><a class="btn p" href="#marcar">Pedir orçamento</a><a class="btn s" href="#trabalhos">Ver trabalhos</a></div>
  </div>
 </header>
+<main class="fundo">
 
 <section class="faco" id="faco">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Mais de 13 anos de tatuagem</span>
   <h2 class="rv">“Será que ele faz esse tipo de tatuagem?” <span>Faço.</span></h2>
@@ -289,7 +285,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="trabalhos">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Portfólio</span>
   <h2 class="rv">Do anime para a pele</h2>
@@ -302,8 +297,7 @@ footer p+p{margin-top:6px}
  </div>
 </section>
 
-<section class="papel" id="flash">
- <div class="mar" aria-hidden="true"></div>
+<section id="flash">
  <div class="wrap">
   <span class="rot rv">Flashes</span>
   <h2 class="rv">Desenhos autorais disponíveis</h2>
@@ -323,7 +317,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="coberturas">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Coberturas</span>
   <h2 class="rv">Sua tatuagem antiga não precisa ser para sempre</h2>
@@ -345,7 +338,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="prem" id="premiado">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Premiado</span>
   <h2 class="rv">2º lugar na Oporto Tattoo</h2>
@@ -359,7 +351,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="sobre">
- <div class="mar" aria-hidden="true"></div>
  <div class="duo">
   <div class="ph rv"><img src="img/enoque.webp" alt="Enoque Barbosa, tatuador" width="1080" height="1350"></div>
   <div class="tx rv">
@@ -375,7 +366,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="prem" id="dizem">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Avaliações no Google</span>
   <h2 class="rv">Quem já tatuou com o Enoque</h2>
@@ -390,8 +380,7 @@ footer p+p{margin-top:6px}
  </div>
 </section>
 
-<section class="curso" id="curso" style="background:var(--bg)">
- <div class="mar" aria-hidden="true"></div>
+<section class="curso" id="curso">
  <div class="wrap" style="max-width:820px;text-align:center">
   <span class="rot rv">Curso individual</span>
   <h2 class="rv">Iniciação à tatuagem</h2>
@@ -402,7 +391,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="estudio prem" id="estudio">
- <div class="mar" aria-hidden="true"></div>
  <div class="duo">
   <div class="tx rv">
    <span class="rot">Estúdio</span>
@@ -417,7 +405,6 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="marcar">
- <div class="mar" aria-hidden="true"></div>
  <div class="wrap">
   <span class="rot rv">Orçamento</span>
   <h2 class="rv">Conte a sua ideia</h2>
@@ -467,6 +454,7 @@ footer p+p{margin-top:6px}
  <p>Anime &amp; Geek · Ink Collective, Vila Nova de Gaia, Porto</p>
  <p>Site por <a href="https://lrgz.com.br">L R G Z</a></p>
 </footer>
+</main>
 
 <div class="lb" id="lb" hidden><p class="lb-leg" id="lbl"></p><button class="x" aria-label="Fechar">×</button><button class="pv" aria-label="Anterior">‹</button><img id="lbi" alt=""><button class="nx" aria-label="Próxima">›</button><button class="btn quero" id="quero">Quero uma assim</button></div>
 
