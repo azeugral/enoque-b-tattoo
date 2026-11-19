@@ -23,7 +23,7 @@
 [hidden]{display:none!important}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--ink);font:400 17px/1.65 Manrope,system-ui,sans-serif;-webkit-font-smoothing:antialiased;overflow-x:hidden}
-img,video{display:block;max-width:100%;-webkit-user-drag:none;user-select:none}
+img,video{display:block;max-width:100%;height:auto;-webkit-user-drag:none;user-select:none}
 a{color:inherit}
 h2{font:400 clamp(2.4rem,5vw,4.1rem)/1.06 Rozha,Georgia,serif;letter-spacing:.005em;text-align:center;text-wrap:balance;margin-bottom:18px}
 .lead{max-width:640px;margin:0 auto 48px;text-align:center;color:var(--mut);text-wrap:balance}
@@ -79,13 +79,14 @@ nav ul a:hover{color:var(--ink)}
 /* adornos: o lineart do próprio Enoque (as folhas que aparecem atrás das peças nas fotos dele), estáticos e apagados */
 section,.hero{position:relative;overflow:hidden}
 section>.wrap,section>.duo{position:relative;z-index:1}
-.orn{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-drag:none;max-width:none;height:auto;opacity:var(--o,.09)}
+.orn{position:absolute;z-index:0;pointer-events:none;user-select:none;-webkit-user-drag:none;max-width:none;height:auto;opacity:var(--o,.08)}
 .orn.m{transform:scaleX(-1)}
-.orn-c{left:50%;top:50px;width:min(520px,78vw);transform:translateX(-50%);--o:.07;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 45%,transparent 85%);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 45%,transparent 85%)}
-.orn-k{bottom:70px;width:clamp(180px,17vw,320px);--o:.1;-webkit-mask-image:linear-gradient(0deg,transparent,#000 22%,#000 65%,transparent);mask-image:linear-gradient(0deg,transparent,#000 22%,#000 65%,transparent)}
-.orn-k.l{left:-1%}.orn-k.r{right:-1%}
-.orn-t{top:80px;width:clamp(150px,14vw,250px);--o:.09;-webkit-mask-image:linear-gradient(180deg,transparent,#000 20%,#000 60%,transparent);mask-image:linear-gradient(180deg,transparent,#000 20%,#000 60%,transparent)}
-.orn-t.l{left:2%}.orn-t.r{right:2%}
+.orn-c{left:50%;top:56px;width:min(440px,70vw);transform:translateX(-50%);--o:.055}
+.orn-k{bottom:64px;width:clamp(170px,15vw,290px);--o:.085}
+.orn-k.l{left:2.5%}.orn-k.r{right:2.5%}
+.orn-t{top:72px;width:clamp(150px,13vw,250px);--o:.08}
+.orn-t.l{left:2.5%}.orn-t.r{right:2.5%}
+.papel .orn{--o:.11}
 
 /* faço: os estilos além do anime, organizados pelas séries do próprio Enoque */
 .faco{background:var(--bg2)}
@@ -249,8 +250,9 @@ footer p+p{margin-top:6px}
  .map{height:280px}
  .duas{grid-template-columns:1fr;gap:22px}
  .chips span{padding:10px 12px;font-size:12px}
- .orn{--o:.06!important}
- .orn-k{width:130px}.orn-t{width:110px}
+ .orn{--o:.05!important}.papel .orn{--o:.08!important}
+ .orn-k{width:112px;bottom:30px}.orn-t{width:100px;top:26px}.orn-k.l,.orn-t.l{left:8px}.orn-k.r,.orn-t.r{right:8px}
+ .orn-c{width:min(300px,76vw);top:28px}
  .lb .pv,.lb .nx{top:auto;bottom:22px;width:48px;height:52px}
  .lb .quero{font-size:12px;padding:0 14px}
 }
@@ -280,7 +282,7 @@ footer p+p{margin-top:6px}
 </header>
 
 <section class="faco" id="faco">
- <img class="orn orn-c" src="img/orn/perfil-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-c" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Mais de 13 anos de tatuagem</span>
   <h2 class="rv">“Será que ele faz esse tipo de tatuagem?” <span>Faço.</span></h2>
@@ -295,12 +297,12 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="trabalhos">
- <img class="orn orn-k l" src="img/orn/menina-d-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/menina-d-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k l" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Portfólio</span>
   <h2 class="rv">Do anime para a pele</h2>
-  <p class="lead rv">Personagens de anime, mangá, games e cultura pop em neo trad colorido, e todos os outros estilos que ele também faz. Cada projeto é desenhado para quem vai tatuar.</p>
+  <p class="lead rv">Personagens de anime, mangá, games e cultura pop em neo trad colorido, e todos os outros estilos que ele também faz.</p>
   <div class="filt rv" id="filt">
    <button class="on" data-f="*">Todos</button><button data-f="an">Anime &amp; Geek</button><button data-f="fl">Fine line</button><button data-f="mi">Minimalista</button><button data-f="tr">Tradicional</button><button data-f="pc">Preto e cinza</button>
   </div>
@@ -310,17 +312,17 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="papel" id="flash">
- <img class="orn orn-t l" src="img/orn/perfil-k.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-t r m" src="img/orn/perfil-k.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t l" src="img/orn/f05-k.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t r m" src="img/orn/f05-k.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Flashes</span>
   <h2 class="rv">Desenhos autorais disponíveis</h2>
-  <p class="lead rv">Desenhos criados pelo Enoque e prontos para a pele. Cada um é tatuado uma vez só: escolheu, é seu.</p>
+  <p class="lead rv">Desenhos autorais do Enoque, prontos para a pele. Pergunte pela disponibilidade de cada um.</p>
   <div class="fl-g rv" id="fls">
    <figure data-g="img/f/02.webp"><span class="fl"><img src="img/f/02.webp" alt="Flash de cavaleiro com armadura verde e vermelha" width="1080" height="1350"></span><figcaption>Cavaleiro de armadura<span>Flash</span></figcaption></figure>
    <figure data-g="img/f/05.webp"><span class="fl"><img src="img/f/05.webp" alt="Flash de personagem de cabelo trançado e véu" width="1080" height="1350"></span><figcaption>Véu e tranças<span>Flash</span></figcaption></figure>
    <figure data-g="img/f/08.webp"><span class="fl"><img src="img/f/08.webp" alt="Flash em carta com dragão branco de olhos azuis" width="1080" height="1350"></span><figcaption>Carta do dragão branco<span>Flash</span></figcaption></figure>
-   <figure data-g="img/f/03.webp"><span class="fl"><img src="img/f/03.webp" alt="Flash em preto e cinza de personagem de cabelo espetado" width="1080" height="1350"></span><figcaption>Preto e cinza<span>Flash</span></figcaption></figure>
+   <figure data-g="img/f/03.webp"><span class="fl"><img src="img/f/03.webp" alt="Flash em preto e cinza de personagem de cabelo espetado" width="1080" height="1350"></span><figcaption>Cabelo espetado<span>Flash</span></figcaption></figure>
    <figure data-g="img/f/06.webp"><span class="fl"><img src="img/f/06.webp" alt="Flash de personagem com bandagens e cigarro" width="1080" height="1350"></span><figcaption>Bandagens e fumaça<span>Flash</span></figcaption></figure>
    <figure data-g="img/f/09.webp"><span class="fl"><img src="img/f/09.webp" alt="Flash em carta com Pokémon roxo e amarelo" width="1080" height="1350"></span><figcaption>Carta roxa<span>Flash</span></figcaption></figure>
    <figure data-g="img/f/10.webp"><span class="fl"><img src="img/f/10.webp" alt="Flash em carta com Charizard" width="1080" height="1350"></span><figcaption>Carta do Charizard<span>Flash</span></figcaption></figure>
@@ -331,15 +333,15 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="coberturas">
- <img class="orn orn-k l" src="img/orn/sanji-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/sanji-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k l" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Coberturas</span>
   <h2 class="rv">Sua tatuagem antiga não precisa ser para sempre</h2>
   <p class="lead rv">Uma boa cobertura vai muito além de esconder um desenho: exige técnica, criatividade e planejamento para transformar a tatuagem antiga numa arte nova.</p>
   <div class="par-g rv" id="pares">
    <figure class="par"><div class="dois"><div><img src="img/c/2-a.webp" alt="Antes: tribal no braço" width="720" height="900"><i>Antes</i></div><div><img src="img/c/2-d.webp" alt="Depois: personagem de capacete em cor sobre o tribal" width="720" height="900"><i>Depois</i></div></div><figcaption>Tribal coberto por um braço colorido</figcaption></figure>
-   <figure class="par"><div class="dois"><div><img src="img/c/3-a.webp" alt="Antes: olho apagado nas costas" width="720" height="900"><i>Antes</i></div><div><img src="img/c/3-d.webp" alt="Depois: beija-flor colorido" width="720" height="900"><i>Depois</i></div></div><figcaption>Olho apagado virou um beija-flor</figcaption></figure>
+   <figure class="par"><div class="dois"><div><img src="img/c/3-a.webp" alt="Antes: olho apagado no ombro" width="720" height="900"><i>Antes</i></div><div><img src="img/c/3-d.webp" alt="Depois: beija-flor colorido" width="720" height="900"><i>Depois</i></div></div><figcaption>Olho apagado virou um beija-flor</figcaption></figure>
    <figure class="par"><div class="dois"><div><img src="img/c/4-a.webp" alt="Antes: caveira mexicana só no contorno" width="720" height="900"><i>Antes</i></div><div><img src="img/c/4-d.webp" alt="Depois: caveira mexicana com rosa em cor" width="720" height="900"><i>Depois</i></div></div><figcaption>Caveira mexicana refeita em cor</figcaption></figure>
    <figure class="par"><div class="dois"><div><img src="img/c/7-a.webp" alt="Antes: letra A ornamentada" width="720" height="900"><i>Antes</i></div><div><img src="img/c/7-d.webp" alt="Depois: crisântemo azul" width="720" height="900"><i>Depois</i></div></div><figcaption>Uma letra antiga sob um crisântemo</figcaption></figure>
    <figure class="par"><div class="dois"><div><img src="img/c/8-a.webp" alt="Antes: antebraço com tatuagem escura e borrada" width="720" height="900"><i>Antes</i></div><div><img src="img/c/8-d.webp" alt="Depois: caveiras em preto e cinza" width="720" height="900"><i>Depois</i></div></div><figcaption>Antebraço escuro coberto por caveiras</figcaption></figure>
@@ -354,22 +356,22 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="prem" id="premiado">
- <img class="orn orn-c" src="img/orn/menina-d-c.webp" alt="" aria-hidden="true" draggable="false" style="width:min(380px,60vw)">
+ <img class="orn orn-c" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Premiado</span>
   <h2 class="rv">2º lugar na Oporto Tattoo</h2>
-  <p class="lead rv">Na Oporto Tattoo Convention 2025, duas peças de Cavaleiros do Zodíaco levaram o 2º lugar na categoria anime. Uma delas foi feita em 25 horas de agulha, durante a convenção.</p>
+  <p class="lead rv">Na Oporto Tattoo Convention 2025, duas peças de Cavaleiros do Zodíaco ficaram em 2º lugar na categoria Anime/Mangá. Uma delas foi tatuada ali mesmo, em 25 horas de agulha.</p>
   <div class="prem-g rv">
-   <figure><img src="img/p/trofeu.webp" alt="Enoque e o cliente com o troféu de 2º lugar na Oporto Tattoo" width="1080" height="1350"><figcaption><b>O troféu</b>25 horas de agulha no stand da convenção</figcaption></figure>
-   <figure><img src="img/p/131.webp" alt="Pégaso, dos Cavaleiros do Zodíaco, na perna" width="1080" height="1350"><figcaption><b>Pégaso</b>2º lugar, categoria anime</figcaption></figure>
-   <figure><img src="img/p/130.webp" alt="Shiryu de Dragão, dos Cavaleiros do Zodíaco" width="1080" height="1350"><figcaption><b>Shiryu de Dragão</b>2º lugar, categoria anime</figcaption></figure>
+   <figure><img src="img/p/trofeu.webp" alt="Enoque e o cliente com as duas placas de 2º lugar da Oporto Tattoo" width="1080" height="1350"><figcaption><b>Os troféus</b>25 horas de agulha no stand da @sacred4you</figcaption></figure>
+   <figure><img src="img/p/131.webp" alt="Pégaso, dos Cavaleiros do Zodíaco, na perna" width="1080" height="1350"><figcaption><b>Pégaso</b>2º lugar, Anime/Mangá</figcaption></figure>
+   <figure><img src="img/p/130.webp" alt="Shiryu de Dragão, dos Cavaleiros do Zodíaco" width="1080" height="1350"><figcaption><b>Shiryu de Dragão</b>2º lugar, Anime/Mangá</figcaption></figure>
   </div>
  </div>
 </section>
 
 <section id="sobre">
- <img class="orn orn-k l" src="img/orn/perfil-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/perfil-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k l" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="duo">
   <div class="ph rv"><img src="img/enoque.webp" alt="Enoque Barbosa, tatuador" width="1080" height="1350"></div>
   <div class="tx rv">
@@ -378,30 +380,32 @@ footer p+p{margin-top:6px}
    <p>Brasileiro, goiano e tatuador há mais de 13 anos. Hoje vive no Porto e atende em Vila Nova de Gaia, transformando histórias, paixões e referências em arte permanente.</p>
    <p>Especialista em tatuagem geek, colorida e micro-realista, une técnica, criatividade e atenção aos detalhes para criar uma tattoo com a identidade de quem vai usar.</p>
    <blockquote>“Cada tatuagem conta uma história, e quero conhecer a sua.”<cite>Enoque Barbosa</cite></blockquote>
-   <div class="fatos"><div><b>Anime &amp; Geek</b><span>Anime, mangá, games e cultura pop</span></div><div><b>Neo trad</b><span>O estilo que ele usa para adaptar o geek</span></div><div><b>Micro-realismo</b><span>Retratos, pets e detalhes pequenos</span></div><div><b>Coberturas</b><span>Tattoo antiga vira projeto novo</span></div></div>
+   <div class="fatos"><div><b>Anime &amp; Geek</b><span>Anime, mangá, games e cultura pop</span></div><div><b>Colorida</b><span>Cor viva em neo trad</span></div><div><b>Micro-realismo</b><span>Realismo em tamanho pequeno</span></div><div><b>Coberturas</b><span>Tatuagem antiga vira arte nova</span></div></div>
    <a class="btn s" href="https://www.instagram.com/enoquebtattoo_/" target="_blank" rel="noopener">@enoquebtattoo_</a>
   </div>
  </div>
 </section>
 
 <section class="prem" id="dizem">
+ <img class="orn orn-t l" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t r m" src="img/orn/f06-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Avaliações no Google</span>
   <h2 class="rv">Quem já tatuou com o Enoque</h2>
   <p class="lead rv">O Ink Collective tem nota 5,0 em 170 avaliações no Google. Estas falam do Enoque.</p>
   <div class="diz-g rv">
-   <figure><p>“O tatuador Enoque é incrível, recomendo 100%. Além de ser um ótimo profissional, entende de animes, e isso deixa a tatuagem ainda melhor!”</p><figcaption>Rafael C.</figcaption></figure>
-   <figure><p>“Deixo o destaque para o tatuador Enoque, que fez um excelente trabalho. Adorei demais a minha tatuagem, e ele foi super atencioso e muito paciente.”</p><figcaption>Miguel M.</figcaption></figure>
-   <figure><p>“O tatuador Enoque se garante, super criativo e detalhista. Obrigado pelo projeto incrível!”</p><figcaption>Ruan P.</figcaption></figure>
-   <figure><p>“Excelente atendimento. A tatuagem ficou exatamente como o meu filho queria. O Enoque fez com uma perfeição incrível!”</p><figcaption>Márcio F.</figcaption></figure>
+   <figure><p>“O tatuador Enoque é incrível, recomendo 100%, além de ser um ótimo profissional entende de animes e isso deixa a tatuagem ainda melhor!”</p><figcaption>Rafael C.</figcaption></figure>
+   <figure><p>“Deixo o destaque para o tatuador Enoque que fez um excelente trabalho, adorei demais a minha tatuagem e ele foi super atencioso, e muito paciente.”</p><figcaption>Miguel M.</figcaption></figure>
+   <figure><p>“Espaço aconchegante, boa vibe! O tatuador Enoque se garante, super criativo e detalhista. Obrigado pelo projeto incrível!”</p><figcaption>Ruan P.</figcaption></figure>
+   <figure><p>“Excelente atendimento. Tatuagem ficou exatamente como meu filho queria. O Enoque fez com uma perfeição incrível!”</p><figcaption>Marcio</figcaption></figure>
   </div>
   <div class="nota rv"><a href="https://maps.app.goo.gl/bruD7jJSPNdhia4AA" target="_blank" rel="noopener">Ver todas as avaliações no Google</a></div>
  </div>
 </section>
 
 <section class="curso" id="curso" style="background:var(--bg)">
- <img class="orn orn-t l" src="img/orn/sanji-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-t r m" src="img/orn/sanji-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k l" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/f02-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap" style="max-width:820px;text-align:center">
   <span class="rot rv">Curso individual</span>
   <h2 class="rv">Iniciação à tatuagem</h2>
@@ -412,8 +416,8 @@ footer p+p{margin-top:6px}
 </section>
 
 <section class="estudio prem" id="estudio">
- <img class="orn orn-k l" src="img/orn/menina-d-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/menina-d-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t l" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-t r m" src="img/orn/f03-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="duo">
   <div class="tx rv">
    <span class="rot">Estúdio</span>
@@ -428,8 +432,8 @@ footer p+p{margin-top:6px}
 </section>
 
 <section id="marcar">
- <img class="orn orn-k l" src="img/orn/perfil-c.webp" alt="" aria-hidden="true" draggable="false">
- <img class="orn orn-k r m" src="img/orn/perfil-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k l" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
+ <img class="orn orn-k r m" src="img/orn/f05-c.webp" alt="" aria-hidden="true" draggable="false">
  <div class="wrap">
   <span class="rot rv">Orçamento</span>
   <h2 class="rv">Conte a sua ideia</h2>
@@ -517,10 +521,10 @@ const RM=matchMedia('(prefers-reduced-motion:reduce)').matches;
 })();
 
 // trabalhos
-const O=window.OBRAS;const g=document.getElementById('grid');let f='*',lim=24,vis=[];
+const O=window.OBRAS;const g=document.getElementById('grid');const LIM=()=>innerWidth<=820?12:24;let f='*',lim=LIM(),vis=[];
 function draw(){vis=O.filter(o=>f=='*'||o[1]==f);g.innerHTML=vis.slice(0,lim).map((o,k)=>`<a href="img/g/${o[0]}.webp" data-k="${k}"><span><img src="img/t/${o[0]}.webp" alt="${o[2]}, tatuagem de Enoque B" width="600" height="750"></span></a>`).join('');document.getElementById('mais').parentNode.hidden=vis.length<=lim}
 draw();
-function filtra(v){document.querySelectorAll('#filt button').forEach(x=>x.classList.toggle('on',x.dataset.f==v));f=v;lim=24;draw()}
+function filtra(v){document.querySelectorAll('#filt button').forEach(x=>x.classList.toggle('on',x.dataset.f==v));f=v;lim=LIM();draw()}
 document.getElementById('filt').onclick=e=>{const b=e.target.closest('button');if(b)filtra(b.dataset.f)};
 document.getElementById('estilos').onclick=e=>{const b=e.target.closest('button');if(!b)return;filtra(b.dataset.f);document.getElementById('trabalhos').scrollIntoView({behavior:'smooth'})};
 document.getElementById('mais').onclick=()=>{lim=999;draw()};
